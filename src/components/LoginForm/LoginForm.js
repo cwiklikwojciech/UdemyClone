@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import bemCssModules from 'bem-css-modules';
 
 import Modal from '../Modal/Modal';
@@ -46,6 +46,15 @@ const LoginForm = ({ handleOnClose, isModalOpen }) => {
 			setValidateMessage(data.message);
 		}
 	};
+
+	useEffect(
+		() => {
+			if (isModalOpen) {
+				resetStateOfInput();
+			}
+		},
+		[ isModalOpen ]
+	);
 
 	return (
 		<Modal handleOnClose={handleOnClose} isOpen={isModalOpen} shouldBeCloseOnOutsideClick={true}>
