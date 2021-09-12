@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import Courses from '../Courses/Courses';
+import UserCourses from '../UserCourses/UserCourses'
 
 import bemCssModules from 'bem-css-modules';
 
@@ -27,7 +28,7 @@ const Content = () => {
 		<main className={style()}>
 			<Switch>
         <Route exact path="/" render={() => <Courses/>} />
-        { isUserLogged && <Route exact path="/my-courses" render={() => <p>Moje kursy</p>} /> }
+        { isUserLogged && <Route exact path="/my-courses" render={() => <UserCourses /> } /> }
         { isAdmin }
         <Redirect to="/"/>
       </Switch>
