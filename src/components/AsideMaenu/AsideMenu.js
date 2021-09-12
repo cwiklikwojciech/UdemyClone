@@ -16,6 +16,8 @@ const AsideMenu = () => {
 
 	const adminMenuComponent = user?.accessLevel === ADMIN_TYPE ? <AdminMenu /> : null;
 
+	console.log("adminMenuComponent", adminMenuComponent);
+
 	return (
 		<section className={style()}>
 			<UserMenu isUserLogged={Boolean(user)} />

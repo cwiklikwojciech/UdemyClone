@@ -12,7 +12,7 @@ const AdminMenu = () => (
     <nav>
       <ul>
         <li className={style('link')}>
-          <Link to="/manage-courses" > Xarządzanie kursami </Link>
+          <Link to="/menage-courses" > Zarządzanie kursami </Link>
         </li>
       </ul>
     </nav>
