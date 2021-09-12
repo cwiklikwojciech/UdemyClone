@@ -9,14 +9,12 @@ const Course = ({ authors, img, price, title }) => {
 	let allAuthors = authors.join(', ');
 
 	return (
-		<li>
-			<article className={style()}>
-				<h3 className={style('title')}> </h3>
-				<img alt={title} className={style('image')} src={img} />
-				<p className={style('price')}> {`Koszt kursu: ${price}zł`}</p>
-				<p className={style('authors')}> {`Autorzy kursu: ${allAuthors}`} </p>
-			</article>
-		</li>
+		<article className={style()}>
+			<h3 className={style('title')}> </h3>
+			<img alt={title} className={style('image')} src={img} />
+			<p className={style('price')}> {`Koszt kursu: ${price}zł`}</p>
+			<p className={style('authors')}> {`Autorzy kursu: ${allAuthors}`} </p>
+		</article>
 	);
 };
 
