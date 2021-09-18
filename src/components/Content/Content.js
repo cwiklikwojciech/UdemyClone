@@ -7,6 +7,7 @@ import bemCssModules from 'bem-css-modules';
 
 import { default as ContentStyles } from './Content.module.scss';
 import { StoreContext } from '../../store/StoreProvider';
+import AdminPanel from '../AdminPanel/AdminPanel';
 
 const style = bemCssModules(ContentStyles);
 
@@ -20,16 +21,12 @@ const Content = () => {
     ? <Route exact path="/menage-courses" render={() => <p>Zarządzanie kursami</p> } />
     : console.log("Brak Admina");
 
-   //console.log("User =", user.accessLevel);
-
-  //console.log("IsAdmin = ", isAdmin);
-
 	return (
 		<main className={style()}>
 			<Switch>
         <Route exact path="/" render={() => <Courses/>} />
         { isUserLogged && <Route exact path="/my-courses" render={() => <UserCourses /> } /> }
-        { isAdmin }
+        { isAdmin && <Route exact path="/manage-courses" render={() => <AdminPanel/> } />}
         <Redirect to="/"/>
       </Switch>
 		</main>
