@@ -3,3 +3,16 @@ A clone of a popular website using React, RestApi. Made educational with the hel
 
 # PL
 Klon popularnego serwisu z wykorzystaniem React, RestApi. Stona wykonana edukacujnie z pomocą tutorialu w celu rozwinięcia swoich umiejętności i podpatrzenia rozwiązań używanych w kodzie przez bardziej doświadczonych.
+
+
+gh repo clone cwiklikwojciech/UdemyClone
+
+Use
+
+```bash
+$ git clone https://github.com/cwiklikwojciech/UdemyClone.git
+$ cd UdemyClone
+$ npm install
+$ npm run dev
+//run the app
+```
